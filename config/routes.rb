@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get '/generate_token', to: 'tokens#generate'
+  get '/validate_token', to: 'tokens#validate'
+  delete '/delete_token', to: 'tokens#delete'
+  put '/renew_token', to: 'tokens#renew'
 end
